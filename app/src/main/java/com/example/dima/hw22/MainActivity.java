@@ -1,5 +1,6 @@
 package com.example.dima.hw22;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -10,18 +11,11 @@ import android.widget.GridView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int apps_count = 24;
-
-    GridView mainGrid;
-    ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        adjustGridView();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -36,9 +30,6 @@ public class MainActivity extends AppCompatActivity {
         });*/
     }
 
-    private void adjustGridView() {
-
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -56,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(intent);
             return true;
         }
 
