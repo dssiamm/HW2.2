@@ -4,17 +4,8 @@
     android:background="@color/white"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
-        <Button
-            android:background="@color/white"
-            android:id="@+id/tvText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:minHeight="40dp"
-            android:textSize="20sp"
-            android:text="EMPTY"
-            android:layout_gravity="center">
-        </Button>
+
+
     </LinearLayout>
 
 
