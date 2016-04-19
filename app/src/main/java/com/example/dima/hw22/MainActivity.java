@@ -6,13 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
 import android.widget.GridView;
+
 
 public class MainActivity extends AppCompatActivity {
 
+    private GridView gridView;
     private Adapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        gridView = (GridView) findViewById(R.id.gridview);
+        adapter = new Adapter(this);
+        adapter.LoadAppInfo();
+        gridView.setAdapter(adapter);
 
 
         //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -58,4 +63,5 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
